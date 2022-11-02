@@ -21,7 +21,10 @@ const authRoutes = require("./routes/auth");
 const postRoutes = require("./routes/post");
 const commentRoutes = require("./routes/comment");
 const userRoutes = require("./routes/user");
-
+// // simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to zen application." });
+});
 //gestion CORS
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
